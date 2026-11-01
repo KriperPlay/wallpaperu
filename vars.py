@@ -43,11 +43,11 @@ list_figures = [
 	'Clover8Leaf',
 	'Fan',
 	'Flower',
-	'Cookie45ided',
-	'Cookie65ided',
-	'Cookie75ided',
-	'Cookie95ided',
-	'Cookie125ided',
+	'Cookie4Sided',
+	'Cookie6Sided',
+	'Cookie7Sided',
+	'Cookie9Sided',
+	'Cookie12Sided',
 	'Boom',
 	'SoftBoom',
 	'Burst',
@@ -80,11 +80,11 @@ group_organic = [
 	'Clover8Leaf',
 	'Fan',
 	'Flower',
-	'Cookie45ided',
-	'Cookie65ided',
-	'Cookie75ided',
-	'Cookie95ided',
-	'Cookie125ided'
+	'Cookie4Sided',
+	'Cookie6Sided',
+	'Cookie7Sided',
+	'Cookie9Sided',
+	'Cookie12Sided'
 ]
 
 group_effects = [
