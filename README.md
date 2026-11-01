@@ -72,8 +72,6 @@ The result is saved in the current working directory as:
 <theme>-<template>-<DD.MM.YYYY-HH:MM>.png
 ```
 
-> ⚠️ Always pass `--shapes` explicitly — see [Known issues](#known-issues--notes).
-
 ---
 
 ## CLI reference
