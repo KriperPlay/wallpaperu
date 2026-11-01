@@ -1,10 +1,10 @@
 # wallpaperu 
 <img width="150" height="150" alt="" src="https://github.com/user-attachments/assets/63a733bd-bfb4-4170-aec4-a1fc943ef30d" />
 
-# Wallpaper Generator
+# About
 (Project written by me, documentation written by DeepSeek)
 
-A small command‑line tool that composes abstract wallpapers from procedurally placed PNG shapes. Each wallpaper is built from a **color theme**, a set of **shapes**, and a **display template** (resolution). Shapes are randomly scaled, rotated, recolored and packed onto a solid background without overlaps.
+wallpaperu - a small command‑line tool that composes abstract wallpapers from procedurally placed PNG shapes. Each wallpaper is built from a **color theme**, a set of **shapes**, and a **display template** (resolution). Shapes are randomly scaled, rotated, recolored and packed onto a solid background without overlaps.
 
 ---
 
@@ -209,6 +209,8 @@ python wallpaperu.py -t night_champagne -s Circle -d Desktop_FHD
 # List all available themes (from the help text)
 python wallpaperu.py --help
 ```
+
+<img width="640" height="360" alt="mint_choco-Desktop_QHD-01 11 2026-15:43" src="https://github.com/user-attachments/assets/6727998b-ea35-4c22-ab6f-99d3e5207590" />
 
 ---
 
