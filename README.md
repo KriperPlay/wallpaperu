@@ -264,11 +264,7 @@ Note that `random.seed(...)` before calling `prepare_shape` / `place_shapes` mak
 
 ## Known issues & notes
 
-1. **`--shapes` has no working default.** The decorator declares `default=["Gem", "Gem", "Pill"]` (a list), but the code calls `shapes.split(',')`, which fails on a list. **Always pass `--shapes` explicitly.** A correct default would be `"Gem,Gem,Pill"` with `type=str`.
-2. **No `--seed` option.** `generate()` accepts a `seed` parameter, but it is not registered as a Click option, so it is always `None` from the CLI. Use the programmatic API (above) if you need reproducibility.
-3. **Filename contains colons.** The output name uses `%H:%M`, which is **invalid on Windows** (reserved character `:`). Either rename after generation or patch the `strftime` format to use `-` instead.
+1. **No `--seed` option.** `generate()` accepts a `seed` parameter, but it is not registered as a Click option, so it is always `None` from the CLI. Use the programmatic API (above) if you need reproducibility.
 4. **Canvas position by bleed.** With `bleed = 0.2`, shapes may be pasted at negative coordinates. Pillow clips them automatically, so this is safe — but partial shapes at the edges are by design, not a bug.
 5. **Missing group membership.** A shape present in `list_figures` but absent from all three groups returns `None` from `color_choice()` and crashes. Keep the lists aligned.
-6. **`time.sleep(0.1)`** in the paste loop is purely cosmetic (progress‑bar pacing) and slows down generation on large batches. Remove it for faster runs.
-7. **`_theme = None`** in `generate()` is unused dead code.
 8. **Packing is heuristic.** If many large shapes are requested for a small template, some will be shrunk repeatedly and eventually skipped with a `"None space for a figure - pass"` message. Increase the number of shapes carefully or reduce `base_side`.
