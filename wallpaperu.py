@@ -126,10 +126,9 @@ def place_shapes(canvas_size, shapes, gap=60, bleed=0.2) -> list:
 
 @click.command()
 @click.option('--theme','-t', default="red", help=f"Themes: {str(PRESETS.keys())[11:-2]} \nAlso u can create own theme (read doc.)")
-@click.option('--shapes','-s', default=["Gem", "Gem", "Pill"], help=f"Enter the shapes separated by commas: \n{(", ".join(list_figures))}")
+@click.option('--shapes','-s', default="Gem,Pill,Boom", help=f"Enter the shapes separated by commas: \n{(", ".join(list_figures))}")
 @click.option('--template','-d',default="Phone_QHD", help="Choice the display template:\nPhone_QHD\nPhone_FHD\nDesktop_FHD\nDesktop_QHD")
 def generate(theme,shapes,template, seed=None) -> None:
-	_theme = None
 	
 	if seed is not None:
 		random.seed(seed)
@@ -146,7 +145,7 @@ def generate(theme,shapes,template, seed=None) -> None:
 		background.paste(shape, pos, mask=shape)
 	
 	now = datetime.now()
-	name = f"{theme}-{template}-{now.strftime("%d.%m.%Y-%H:%M")}.png"
+	name = f"{theme}-{template}-{now.strftime("%d.%m.%Y-%H|%M")}.png"
 	print(f"File {name} created")
 	background.save(name)
 
